@@ -1,0 +1,76 @@
+-- Tạo bảng departments
+CREATE TABLE departments (
+    id SERIAL PRIMARY KEY,
+    department_code VARCHAR,
+    department_name VARCHAR
+ 
+);
+
+-- Tạo bảng classes
+CREATE TABLE classes (
+    id SERIAL PRIMARY KEY,
+    class_code VARCHAR,
+    class_name VARCHAR,
+    department_id INTEGER
+
+);
+
+-- Tạo bảng teachers
+CREATE TABLE teachers (
+    id SERIAL PRIMARY KEY,
+    teacher_code VARCHAR,
+    full_name VARCHAR,
+    gender VARCHAR,
+    birth_date DATE,
+    email VARCHAR,
+    phone VARCHAR,
+    department_id INTEGER
+
+);
+
+-- Tạo bảng students
+CREATE TABLE students (
+    id SERIAL PRIMARY KEY,
+    student_code VARCHAR,
+    full_name VARCHAR,
+    gender VARCHAR,
+    birth_date DATE,
+    email VARCHAR,
+    phone VARCHAR,
+    class_id INTEGER,
+    status VARCHAR
+ 
+);
+
+-- Tạo bảng subjects
+CREATE TABLE subjects (
+    id SERIAL PRIMARY KEY,
+    subject_code VARCHAR,
+    subject_name VARCHAR,
+    credits INTEGER,
+    department_id INTEGER
+
+);
+
+-- Tạo bảng teacher_subjects
+CREATE TABLE teacher_subjects (
+    id SERIAL PRIMARY KEY,
+    teacher_id INTEGER,
+    subject_id INTEGER,
+    academic_year VARCHAR
+  
+);
+
+-- Tạo bảng grades
+CREATE TABLE grades (
+    id SERIAL PRIMARY KEY,
+    student_id INTEGER,
+    subject_id INTEGER,
+    teacher_id INTEGER,
+    attendance_score FLOAT,
+    midterm_score FLOAT,
+    final_score FLOAT,
+    average_score FLOAT,
+    academic_year VARCHAR
+
+);

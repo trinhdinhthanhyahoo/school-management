@@ -1,0 +1,15 @@
+# Đặt hành vi mặc định cho text files
+* text=auto
+
+# Xác định rõ các loại file
+*.java text
+*.xml text
+*.properties text
+*.md text
+*.yml text
+*.yaml text
+
+# Các file binary không nên được chuyển đổi
+*.jar binary
+*.png binary
+*.jpg binary

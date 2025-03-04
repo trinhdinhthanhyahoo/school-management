@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Khoa/Ngành</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="departments.html">Quản lý Khoa/Ngành</a></li>
+            <li><a href="classes.html">Quản lý Lớp học</a></li>
+            <li><a href="teachers.html">Quản lý Giảng viên</a></li>
+            <li><a href="students.html">Quản lý Sinh viên</a></li>
+            <li><a href="subjects.html">Quản lý Môn học</a></li>
+            <li><a href="grades.html">Quản lý Điểm số</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Quản lý Khoa/Ngành</h1>
+
+        <section class="form-section">
+            <h2>Thêm Khoa/Ngành mới</h2>
+            <form id="department-form">
+                <div class="form-group">
+                    <label for="department_code">Mã khoa:</label>
+                    <input type="text" id="department_code" name="department_code" required>
+                </div>
+                <div class="form-group">
+                    <label for="department_name">Tên khoa:</label>
+                    <input type="text" id="department_name" name="department_name" required>
+                </div>
+                <button type="submit">Thêm mới</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Danh sách Khoa/Ngành</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã khoa</th>
+                        <th>Tên khoa</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="department-list">
+                    <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="departments.js"></script>
+</body>
+
+</html>

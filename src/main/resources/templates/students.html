@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sinh viên</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="departments.html">Quản lý Khoa/Ngành</a></li>
+            <li><a href="classes.html">Quản lý Lớp học</a></li>
+            <li><a href="teachers.html">Quản lý Giảng viên</a></li>
+            <li><a href="students.html">Quản lý Sinh viên</a></li>
+            <li><a href="subjects.html">Quản lý Môn học</a></li>
+            <li><a href="grades.html">Quản lý Điểm số</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Quản lý Sinh viên</h1>
+
+        <section class="form-section">
+            <h2>Thêm Sinh viên mới</h2>
+            <form id="student-form">
+                <div class="form-group">
+                    <label for="student_code">Mã sinh viên:</label>
+                    <input type="text" id="student_code" name="student_code" required>
+                </div>
+                <div class="form-group">
+                    <label for="full_name">Họ và tên:</label>
+                    <input type="text" id="full_name" name="full_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Giới tính:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Chọn giới tính</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="birth_date">Ngày sinh:</label>
+                    <input type="date" id="birth_date" name="birth_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="class_id">Lớp:</label>
+                    <select id="class_id" name="class_id" required>
+                        <option value="">Chọn lớp</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="status">Trạng thái:</label>
+                    <select id="status" name="status" required>
+                        <option value="">Chọn trạng thái</option>
+                        <option value="Đang học">Đang học</option>
+                        <option value="Bảo lưu">Bảo lưu</option>
+                        <option value="Đã tốt nghiệp">Đã tốt nghiệp</option>
+                    </select>
+                </div>
+                <button type="submit">Thêm mới</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Danh sách Sinh viên</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã SV</th>
+                        <th>Họ và tên</th>
+                        <th>Giới tính</th>
+                        <th>Ngày sinh</th>
+                        <th>Email</th>
+                        <th>SĐT</th>
+                        <th>Lớp</th>
+                        <th>Trạng thái</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+                    <!-- Dữ liệu sẽ được thêm vào đây bằng JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="students.js"></script>
+</body>
+
+</html>
